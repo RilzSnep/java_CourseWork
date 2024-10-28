@@ -2,20 +2,21 @@ public class Employee {
     String fullName;
     int department;
     int salary;
-    int id = 0;
+    static int id = 1;
+    private int developers;
 
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = 0;
+        this.developers = id;
+        id = id + 1;
 
     }
 
     public int conterId() {
-        this.id++;
-        return this.id;
+        return this.developers;
     }
 
     public String getfullName() {
