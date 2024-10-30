@@ -3,20 +3,18 @@ public class Employee {
     int department;
     int salary;
     static int id = 1;
-    private int developers;
 
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.developers = id;
         id = id + 1;
 
     }
 
     public int conterId() {
-        return this.developers;
+        return this.id;
     }
 
     public String getfullName() {
