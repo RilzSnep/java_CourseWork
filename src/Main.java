@@ -22,7 +22,7 @@ public class Main {
 
     public static void allEmloyee() {
         for (int i = 0; i < employees.length; i++) {
-            System.out.println("id-" + employees[i].getId(i) + " " + employees[i].getfullName() + ", отдел: " + employees[i].getDepartment() + ", ЗП: " + employees[i].getSalary());
+            System.out.println("id-" + employees[i].getId() + " " + employees[i].getfullName() + ", отдел: " + employees[i].getDepartment() + ", ЗП: " + employees[i].getSalary());
         }
         System.out.println(" ");
     }
