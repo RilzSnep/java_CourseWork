@@ -2,19 +2,20 @@ public class Employee {
     String fullName;
     int department;
     int salary;
-    int id = 0;
+    private static int idCounter = 0;
+
+    private int id;
 
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = 0;
+        this.id = idCounter++;
 
     }
 
     public int conterId() {
-        this.id++;
         return this.id;
     }
 
@@ -22,9 +23,9 @@ public class Employee {
         return fullName;
     }
 
-    public int getId(int id) {
-        id += 1;
-        return id;
+    public int getId() {
+        this.id += 1;
+        return this.id;
     }
 
 

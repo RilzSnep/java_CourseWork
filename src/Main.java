@@ -16,20 +16,20 @@ public class Main {
         totalSalary();
         minSalary();
         maxSalary();
-        srSalary();
+        averageSalary();
         allNamesEmloyee();
     }
 
     public static void allEmloyee() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("id-" + employees[i].getId(i) + " " + employees[i].getfullName() + ", отдел: " + employees[i].getDepartment() + ", ЗП: " + employees[i].getSalary());
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println("id-" + employees[i].getId() + " " + employees[i].getfullName() + ", отдел: " + employees[i].getDepartment() + ", ЗП: " + employees[i].getSalary());
         }
         System.out.println(" ");
     }
 
     public static void totalSalary() {
         int total = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < employees.length; i++) {
             total += employees[i].salary;
         }
         System.out.println("Всего трат: " + total);
@@ -39,7 +39,7 @@ public class Main {
     public static void minSalary() {
         int num = 0;
         int toto = 1000000000;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < employees.length; i++) {
             if (toto > employees[i].salary) {
                 num = i;
                 toto = employees[i].salary;
@@ -52,7 +52,7 @@ public class Main {
     public static void maxSalary() {
         int num = 0;
         int toto = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < employees.length; i++) {
             if (toto < employees[i].salary) {
                 num = i;
                 toto = employees[i].salary;
@@ -62,16 +62,16 @@ public class Main {
         System.out.println(" ");
     }
 
-    public static void srSalary() {
+    public static void averageSalary() {
         int total = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < employees.length; i++) {
             total += employees[i].salary;
         }
         System.out.println("Средняя ЗП " + total / 10);
     }
 
     public static void allNamesEmloyee() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < employees.length; i++) {
             System.out.println(employees[i].getfullName());
         }
         System.out.println(" ");
